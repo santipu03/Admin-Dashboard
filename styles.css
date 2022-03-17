@@ -28,7 +28,7 @@ body {
 /*TOP HEADER*/
 .top-header {
     display: grid;
-    grid-template-columns: 20px 65% 30px 55px 80px;
+    grid-template-columns: 20px 1fr 30px 55px 80px;
     grid-template-rows: 30px;
     font-weight: bold;
     align-items: center;
@@ -40,8 +40,8 @@ input {
     outline: none;
     border: none;
     background-color: #ddd6fe;
-    height: 25px;
-    width: 80%;
+    height: 30px;
+    width: 70%;
     border-radius: 15px;
     padding: 0 15px;
 }
@@ -66,6 +66,7 @@ img {
 .bottom-header img {
     width: 70px;
     height: 70px;
+    margin-right: 10px;
 }
 
 button {
@@ -81,7 +82,25 @@ button {
     font-weight: bold;
 }
 
+button:active {
+    border: 2px solid #6d28d9;
+    background-color: #fff;
+    color: #6d28d9;
+}
 
+button:hover{
+    cursor: pointer;
+}
+
+.text-header div:first-child{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.text-header div:nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+}
 
 /*ASIDE*/
 .aside {
@@ -91,6 +110,11 @@ button {
     padding: 20px;
 }
 
+a:link, a:visited {
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
 .dashboard {
     font-size: 25px;
     margin-bottom: 30px;
@@ -109,7 +133,136 @@ button {
     align-items: center;
 }
 
-
+/*MAIN*/
 .main {
-    background-color: #c4b5fd;
+    background-color: #ddd6fe;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* my projects section */
+.projects {
+    grid-row: 1/3;
+    padding: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.project-grid-items{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    padding-left: 35px;
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    border-left: 6px solid #4c1d95;
+}
+
+.project-grid-item-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.project-grid-item-text {
+    font-size: 13px;
+    color: #666;
+}
+
+.project-grid-item-icon {
+    /* margin-top: 15px; */
+    margin-right: 20px; 
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: flex-end;
+
+}
+
+.project-grid-item-icon i {
+    color: #777;
+}
+
+
+/* announcements section */
+.announcements {
+    padding: 20px;
+}
+
+.ann-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.ann-cards {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.ann-card-item-title {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.ann-card-item-text {
+    font-size: 10px;
+    color: #666;
+}
+
+hr.hr {
+    margin: 15px;
+    background-color: #666;
+    border: none;
+    height: 1px;
+}
+
+/* trending section */
+.trending {
+    padding: 20px;
+}
+
+.trending-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.trending-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trending-card-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.trending-card-item img {
+    border-radius: 50%;
+    height: 40px;
+    width: auto;
+}
+
+.trending-card-item-user {
+    font-size: 14px;
+}
+
+.trending-card-item-description {
+    font-size: 12px;
+    color: #666;
 }
