@@ -2,7 +2,15 @@
 /* Roboto Font*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
+:root {
+    --primary-color: #7c3aed;
+    --primary-color-light: #ddd6fe;
+    --primary-color-dark: #6d28d9;
+    --primary-color-dark2: #4c1d95;
+    --white-color: #fff;
+    --grey-color: #666;
+    --grey-color-light: #ccc;
+}
 
 * {
     margin: 0;
@@ -39,11 +47,15 @@ body {
 input {
     outline: none;
     border: none;
-    background-color: #ddd6fe;
-    height: 30px;
+    background-color: var(--primary-color-light);
+    height: 35px;
     width: 70%;
     border-radius: 15px;
     padding: 0 15px;
+}
+
+input:focus {
+    border: 2px solid var(--primary-color-dark2);
 }
 img {
     width: 50px;
@@ -75,17 +87,17 @@ button {
     padding: 10px 15px;
     border: none;
     outline: none;
-    background-color: #6d28d9;
-    color: #fff;
+    background-color: var(--primary-color-dark);
+    color: var(--white-color);
     border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
 }
 
 button:active {
-    border: 2px solid #6d28d9;
-    background-color: #fff;
-    color: #6d28d9;
+    border: 2px solid var(--primary-color-dark);
+    background-color: var(--white-color);
+    color: var(--primary-color-dark);
 }
 
 button:hover{
@@ -104,17 +116,25 @@ button:hover{
 
 /*ASIDE*/
 .aside {
-    background-color: #7c3aed;
+    background-color: var(--primary-color);
     grid-row: 1/3;
-    color: #fff;
+    color: var(--white-color);
     padding: 20px;
 }
 
 a:link, a:visited {
-    color: #fff;
+    color: var(--white-color);
     outline: none;
     text-decoration: none;
 }
+
+.items1 div:hover, 
+.items2 div:hover,
+a:hover {
+    color: var(--grey-color-light);
+}
+
+
 .dashboard {
     font-size: 25px;
     margin-bottom: 30px;
@@ -135,7 +155,7 @@ a:link, a:visited {
 
 /*MAIN*/
 .main {
-    background-color: #ddd6fe;
+    background-color: var(--primary-color-light);
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -159,13 +179,13 @@ a:link, a:visited {
 }
 
 .project-grid-items{
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 10px;
     padding: 30px 20px;
     padding-left: 35px;
     display: grid;
     grid-template-rows: 30px 1fr 30px;
-    border-left: 6px solid #4c1d95;
+    border-left: 6px solid var(--primary-color-dark2);
 }
 
 .project-grid-item-title {
@@ -176,7 +196,7 @@ a:link, a:visited {
 
 .project-grid-item-text {
     font-size: 13px;
-    color: #666;
+    color: var(--grey-color);
 }
 
 .project-grid-item-icon {
@@ -190,7 +210,7 @@ a:link, a:visited {
 }
 
 .project-grid-item-icon i {
-    color: #777;
+    color: var(--grey-color);
 }
 
 
@@ -204,7 +224,7 @@ a:link, a:visited {
     font-weight: bold;
 }
 .ann-cards {
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 10px;
     padding: 25px;
 }
@@ -217,12 +237,12 @@ a:link, a:visited {
 
 .ann-card-item-text {
     font-size: 10px;
-    color: #666;
+    color: var(--grey-color);
 }
 
 hr.hr {
     margin: 15px;
-    background-color: #666;
+    background-color: var(--grey-color);
     border: none;
     height: 1px;
 }
@@ -238,7 +258,7 @@ hr.hr {
 }
 
 .trending-card {
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -264,5 +284,5 @@ hr.hr {
 
 .trending-card-item-description {
     font-size: 12px;
-    color: #666;
+    color: var(--grey-color);
 }
